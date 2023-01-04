@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main id="main_content">
+        <div id="container">
+            <div id="sub-containe" style="color:rgb(21, 22, 22); position: relative; top: 40%;">
+                <h4 style="text-align: center; font-size: 30px;">
+                  <span>Hi! <strong id="name"></strong> <br/></span>  Your lucky number is  <br/><span id="number" ></span> 
+                </h4>
+                <p style="text-align: center; margin-top: 20px;"> Thank You!</p>
+            </div>
+        </div>
+
+    </main>
+    <style>
+        #sub-cotainer{
+           
+        }
+    </style>
+
+    <script>
+        window.addEventListener('load', () =>{
+
+            const name = localStorage.getItem('name')
+            
+            document.getElementById('name').textContent = name
+            const luckyNumber = Math.floor(1000 + Math.random() * 9000 )
+
+            document.getElementById('number').textContent = luckyNumber
+            document.getElementById('number').style.color = "gold"
+            document.getElementById('number').style.textShadow = "1px 1px 2px black"
+            document.getElementById('number').style.fontSize = "40px"
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+:root{
+    ---somehowblack : rgb(8, 8, 8);
+    ---somehoeblue : rgb(60, 60, 145); 
+}
+
+#main_content{
+    position: relative;
+    display: flex;
+    height: 100vh;
+    background-color: var(---somehowblack);
+}
+
+#container{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    
+    justify-content: center;
+    height: 100vh;
+    width: 80%;
+    height: 90%;
+    border-radius: 10px;
+    
+}
+#sub-container{
+    position: relative;
+    top: 130px;
+}
+.btn{
+    padding: 5px;
+    margin: 5px;
+}
+.btn-primary{
+    background-color: royalblue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.form_item{
+width: 90%;
+display: flex;
+position: relative;
+
+
+}
+#form{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:0%
+}
+.form_item input, button{
+    padding: 10px;
+    width: 130%;
+    border: none;
+    margin: 6px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.336);
+}
+@media screen and (min-width:768px) {
+    #container{
+        background-color: aliceblue;
+        position: relative;
+        
+        justify-content: center;
+        height: 100vh;
+        width: 40%;
+        height: 90%;
+        border-radius: 10px;
+    
+}
+}

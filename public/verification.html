@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Email Verification</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main id="main_content">
+         <div id="container">
+            <div id="sub-containe" style="position: relative; top: 40%;">
+            
+                <div class="form_item">
+                    <input type="text" id="code" placeholder="Enter Code">
+                </div>
+                <p id="wrong" style="text-align: center; position: absolute; width: fit-content; top: 0; bottom: 0; display: flex;"></p>
+                <div class="form_item">
+                    <button value="Get Email" id="codebtn" class="btn btn-primary" onclick="checker()">Submit Code</button>
+                </div>
+              
+         </div>
+        </div>
+    </main>
+
+    <script>
+        function checker(){ 
+            const code1 = localStorage.getItem('code')
+            const code2 =  document.querySelector('#code').value
+            const code = document.querySelector('#codebtn')
+  console.log(code1, code2)
+            if (code1 === code2) {
+
+                code.textContent = "Validating Code..."
+                setTimeout(()=>{
+           window.location = "dashboard.html"
+            }, 3000)
+            }
+            else{
+               const alert = document.createElement('span')
+               alert.textContent = "Invalid or Expired Code"
+               alert.style.color = "red"
+               alert.style.textAlign = "center"
+               alert.style.fontSize = "20px"
+
+               document.getElementById('wrong').appendChild(alert)
+            }
+
+        }
+            
+          
+    </script>
+</body>
+</html>
