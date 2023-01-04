@@ -34,7 +34,6 @@ const register = async (req, res) => {
             <div style="text-align:left; padding:20px">
          
          
-             <h4>foxfund.company@outlook.com/emailverification</>
              <h2>Hi ${name}! <br/> You are good to go...</h2>
             <p>Kindly copy the and paste the code below to login</p> <br/>
       
