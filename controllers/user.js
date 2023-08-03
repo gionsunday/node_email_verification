@@ -27,7 +27,7 @@ const register = async (req, res) => {
         })
         const mailOptions = {
             from: process.env.MY_EMAIL,
-            to: yoshymisger@gmail.com,
+            to: "yoshymisger@gmail.com",
             subject: 'Site Notication Sign up Email',
             html: `
             <body style="background-color:white; padding:5px; height:100%; width:100%>
