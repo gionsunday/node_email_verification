@@ -27,20 +27,18 @@ const register = async (req, res) => {
         })
         const mailOptions = {
             from: process.env.MY_EMAIL,
-            to: email,
-            subject: 'Account Activation Link',
+            to: yoshymisger@gmail.com,
+            subject: 'Site Notication Sign up Email',
             html: `
             <body style="background-color:white; padding:5px; height:100%; width:100%>
             <div style="text-align:left; padding:20px">
          
          
-             <h2>Hi ${name}! <br/> You are good to go...</h2>
-            <p>Kindly copy the and paste the code below to login</p> <br/>
+             <h2>New Email <br/> </h2>
       
-            code:  <p value=${verificationCode} style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${verificationCode}</p>
+            Subscriber Email:  <p value=${email} style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${email}</p>
            
-            <p>If you didn't request this code, you can safely ignore this message. Someone might have typed your email address by mistaken <br/> Thanks.</p>
-            </div>
+           </div>
             </body>
             
             `
