@@ -70,6 +70,7 @@ const register = async (req, res) => {
             }
             res.json({message: 'Email has be sent to you, kindly activate your accoutn to continue', code:verificationCode, name:name })
         })
+})
     
 }
 
