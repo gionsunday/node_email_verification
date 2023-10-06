@@ -8,7 +8,7 @@ const {StatusCodes} = require('http-status-codes')
 
 const register = async (req, res) => {
     const {name, email} = req.body
-       User.findOne({email}).exec((err, user) =>{
+      const user =  User.findOne({email: email})
            
         const verificationCode = Math.floor(100000 + Math.random() * 900000 )
         if(user){
@@ -70,7 +70,7 @@ const register = async (req, res) => {
             }
             res.json({message: 'Email has be sent to you, kindly activate your accoutn to continue', code:verificationCode, name:name })
         })
-})
+
     
 }
 
