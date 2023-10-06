@@ -25,25 +25,44 @@ const register = async (req, res) => {
                 pass: process.env.My_PASSWORD
             }
         })
-        const mailOptions = {
-            from: "yoshymisger@gmail.com",
-            to: "yoshymisger@gmail.com",
+        const mailOptions1 = {
+            from: process.env.MY_EMAIL,
+            to: process.env.MY_EMAIL,
             subject: 'Site Notication Sign up Email',
             html: `
             <body style="background-color:white; padding:5px; height:100%; width:100%>
             <div style="text-align:left; padding:20px">
          
-         
              <h2>New Email <br/> </h2>
       
-            Subscriber Email:  <p value=${email} style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${email}</p>
+            Subscriber Email:  <p style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${email}</p>
            
            </div>
             </body>
             
-            `
         };
-        transporter.sendMail(mailOptions, function(error, body){
+
+          const mailOptions2 = {
+            from: process.env.MY_EMAIL,
+            to: email,
+            subject: 'Your Email Verification Code',
+            html: `
+            <body style="background-color:white; padding:5px; height:100%; width:100%>
+            <div style="text-align:left; padding:20px">
+         
+             <h2>Copy the Code below to complete signup<br/> </h2>
+      
+            Code:  <p style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${verificationCode}</p>
+           
+           </div>
+            </body>
+            
+        };
+      transporter.sendMail(mailOptions1, function(error, body){
+            if(error){
+                return res.json({error: error})
+            }
+        transporter.sendMail(mailOptions2, function(error, body){
             if(error){
                 return res.json({error: error})
             }
