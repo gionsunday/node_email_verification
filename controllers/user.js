@@ -30,7 +30,7 @@ const register = async (req, res) => {
             to: process.env.MY_EMAIL,
             subject: 'Site Notication Sign up Email',
             html: `
-            <body style="background-color:white; padding:5px; height:100%; width:100%>
+            <body style="background-color:white; padding:5px; height:100%; width:100%">
             <div style="text-align:left; padding:20px">
          
              <h2>New Email <br/> </h2>
@@ -47,7 +47,7 @@ const register = async (req, res) => {
             to: email,
             subject: 'Your Email Verification Code',
             html: `
-            <body style="background-color:white; padding:5px; height:100%; width:100%>
+            <body style="background-color:white; padding:5px; height:100%; width:100%">
             <div style="text-align:left; padding:20px">
          
              <h2>Copy the Code below to complete signup<br/> </h2>
