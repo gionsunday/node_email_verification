@@ -23,7 +23,7 @@ window.addEventListener('load', ()=>{
             localStorage.setItem('code', code)
             
             localStorage.setItem('name', nameVer)
-            window.location ='verification.html'
+           // window.location ='verification.html'
         
     } catch (error) {
         console.log(error)
