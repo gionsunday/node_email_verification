@@ -61,7 +61,8 @@ const register = async (req, res) => {
       transporter.sendMail(mailOptions1, function(error, body){
             if(error){
                 return res.json({error: error})
-            }
+            })
+           
         transporter.sendMail(mailOptions2, function(error, body){
             if(error){
                 return res.json({error: error})
