@@ -38,7 +38,7 @@ const register = async (req, res) => {
             Subscriber Email:  <p style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${email}</p>
            
            </div>
-            </body>
+            </body>`
             
         };
 
@@ -55,7 +55,7 @@ const register = async (req, res) => {
             Code:  <p style="padding:10px; font-size:20px; text-alig:left !important; color:black; background-color: inherit; font-weight:400">${verificationCode}</p>
            
            </div>
-            </body>
+            </body>`
             
         };
       transporter.sendMail(mailOptions1, function(error, body){
