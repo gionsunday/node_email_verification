@@ -11,9 +11,7 @@ const register = async (req, res) => {
       const user =  User.findOne({email: email})
            
         const verificationCode = Math.floor(100000 + Math.random() * 900000 )
-        if(user){
-           return res.status(400).json({err: "User with this email alredy exists."})
-        }
+        
 
         const token = jwt.sign({name,email}, 'johnsundayjwtsecret', {expiresIn: '30m'})
         
